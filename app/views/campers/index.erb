@@ -1,4 +1,17 @@
 <h2>Here are All the Campers</h2>
 
+<ul>
+<%@campers.each do |camper|%>
+    <li>
+    <%=link_to camper.name, camper_path(camper)%>
+    -
+    <%=camper.age.to_s%>
+    </li>
+
+
+<%end%>
+
+</ul>
+
 <%# Display a list all of the campers %>
 

@@ -1,3 +1,16 @@
 <h2>Here are All the Activities</h2>
 
+
+<ul>
+<%@activities.each do |activity|%>
+    <li>
+    <%=link_to activity.name, activity_path(activity)%>
+    -
+    <%=activity.difficulty.to_s%>
+    </li>
+
+
+<%end%>
+
+</ul>
 <%# Display a list all of the activities %>
